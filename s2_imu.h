@@ -17,7 +17,7 @@ class IMU_Class {
   IMU_Class();
 
   void IMU_initialization();
-  float IMU_loop();
+  int IMU_loop();
   int IMU_interaction();
 
 

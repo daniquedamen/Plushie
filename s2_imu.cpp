@@ -39,7 +39,8 @@ int IMU_Class::IMU_loop(){
   gyr[2] = myIMU.readFloatGyroZ();
 
   // > 200 +- is interaction
-  magnitude = sqrt(pow(gyr[0], 2) + pow(gyr[1],2) + pow(gyr[2],2)); 
+  magnitude = sqrt(pow(gyr[0], 2) + pow(gyr[1],2) + pow(gyr[2],2)) - 2; 
+  Serial.println(magnitude);
 
   return magnitude;
 }

@@ -60,7 +60,7 @@ void BLE_Class::BLE_initialization()
 
 
   // Initialize sensors
-  //air.air_initialization();
+  air.air_initialization();
   imu.IMU_initialization();
   cap.cap_initialization();
   mic.mic_initialization();
@@ -118,9 +118,10 @@ void BLE_Class::WriteInteract()
   imu_char.writeValue(BArrayIMU, 2);
 
   int capdata = cap.cap_loop();
+  Serial.println(capdata);
   cap_char.writeValue((byte)capdata);
 
-  int airdata = 0; //air.air_loop();
+  int airdata = air.air_loop();
   ByteFunc(airdata, BArrayAir);
   air_char.writeValue(BArrayAir, 2);
   

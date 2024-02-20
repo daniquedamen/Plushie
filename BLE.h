@@ -14,7 +14,7 @@ BLE library: https://github.com/arduino-libraries/ArduinoBLE
 #include "s1_mic.h"
 #include "s2_imu.h"
 #include "s3_cap.h"
-//#include "s4_air.h"
+#include "s4_air.h"
 
 class BLE_Class {
 
@@ -34,7 +34,7 @@ class BLE_Class {
   Mic_Class mic;
   IMU_Class imu;
   Cap_Class cap;
-  //Air_Class air;
+  Air_Class air;
 
 
   byte BArrayMic[2];

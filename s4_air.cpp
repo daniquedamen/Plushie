@@ -16,7 +16,7 @@ Air_Class::Air_Class(){
 }
 
 void Air_Class::air_initialization() {
-    scale.begin(A1, SCK);
+    scale.begin(A0, SCK);
     scale.set_scale(2280);
     scale.tare();
 }
@@ -24,7 +24,11 @@ void Air_Class::air_initialization() {
 // average of 5 readings
 int Air_Class::air_loop() {
 
-  airp = int(scale.get_units(5)/10000);
+  airp = int(scale.get_units(5));
+
+  if (airp < 0){
+    airp = 0;
+  }
 
   return airp;
 }

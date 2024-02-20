@@ -71,7 +71,7 @@ int Mic_Class::mic_peak(){
 
   // Frequency with highest magnitude is obtained
   peak = FFT.MajorPeak(vReal, SAMPLES, samplingFrequency);
-  peak = int(peak)
+  peak = int(peak);
 
   record_ready = false; 
 }

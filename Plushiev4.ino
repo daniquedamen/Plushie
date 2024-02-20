@@ -14,7 +14,7 @@ For more information, please contact me.
 BLE_Class ble;
 
 void setup() {
-  ble.BLE_initialisation();
+  ble.BLE_initialization();
 }
 
 unsigned long looptime;
